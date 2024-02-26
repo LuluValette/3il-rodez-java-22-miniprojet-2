@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Noeud<E> {
-    private E valeur;
-    private List<Noeud<E>> voisins;
+    private final E valeur;
+    private final List<Noeud<E>> voisins;
 
     public Noeud(E valeur){
         this.valeur=valeur;
-        this.voisins = new ArrayList();
+        this.voisins = new ArrayList<>();
     }
 
     public E getValeur() {
