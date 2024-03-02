@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d66c37f-c813-41f0-8d57-0c3a404fc812" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/elements/Graphe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/REPONSES.md" beforeDir="false" afterPath="$PROJECT_DIR$/REPONSES.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/elements/Noeud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/elements/Noeud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/elements/Graphe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/elements/Graphe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,26 +35,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mmp04/Documents/cours/java/Projet/Plus court chemin sur une carte/3il-rodez-java-22-miniprojet-2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mmp04/Documents/cours/java/projets/mini projet 2/3il-rodez-java-22-miniprojet-2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
@@ -74,6 +72,7 @@
       <workItem from="1708952025166" duration="773000" />
       <workItem from="1708952845708" duration="3307000" />
       <workItem from="1708957793534" duration="1877000" />
+      <workItem from="1709386985310" duration="1857000" />
     </task>
     <servers />
   </component>
