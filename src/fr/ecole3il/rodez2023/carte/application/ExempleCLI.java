@@ -2,7 +2,6 @@ package fr.ecole3il.rodez2023.carte.application;
 
 import fr.ecole3il.rodez2023.carte.AdaptateurAlgorithme;
 import fr.ecole3il.rodez2023.carte.chemin.algorithmes.AlgorithmeAEtoile;
-import fr.ecole3il.rodez2023.carte.chemin.algorithmes.AlgorithmeChemin;
 import fr.ecole3il.rodez2023.carte.chemin.algorithmes.AlgorithmeDijkstra;
 import fr.ecole3il.rodez2023.carte.elements.Carte;
 import fr.ecole3il.rodez2023.carte.elements.Chemin;

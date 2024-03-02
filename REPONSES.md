@@ -11,4 +11,4 @@
 ****
 **Question : Pourquoi pensez-vous que la création d'une interface est une bonne pratique dans ce contexte ?**
 
-**Réponse :**
+**Réponse :** Cela permet de respecter les règles SOLID.
