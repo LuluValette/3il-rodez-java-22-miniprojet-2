@@ -6,45 +6,62 @@ import fr.ecole3il.rodez2023.carte.elements.Noeud;
 import java.util.*;
 
 public class AlgorithmeDijkstra<E> implements AlgorithmeChemin<E> {
+    /*
+            Map<Noeud<E>, Double> couts = new HashMap<>();
+        Map<Noeud<E>, Noeud<E>> predecesseurs = new HashMap<>();
 
-    // Initialisation des structures de données
-    private Map<Noeud<E>, Double> couts = new HashMap<>();
-    private Map<Noeud<E>, Noeud<E>> predecesseurs = new HashMap<>();
-    private PriorityQueue<Noeud<E>> filePriorite = new PriorityQueue<>(Comparator.comparingDouble(couts::get));
+        for (Noeud<E> noeud : graphe.getNoeuds()) {
+            couts.put(noeud, Double.POSITIVE_INFINITY);
+            predecesseurs.put(noeud, null);
+        }
+        couts.put(depart, 0.0);
+
+        PriorityQueue<Noeud<E>> filePriorite = new PriorityQueue<>((n1, n2) -> (int) (couts.get(n1) - couts.get(n2)));
+        filePriorite.add(depart);
+     */
     @Override
     public List<Noeud<E>> trouverChemin(Graphe<E> graphe, Noeud<E> depart, Noeud<E> arrivee) {
-        // Initialiser les coûts avec l'infini sauf pour le nœud de départ
-        for (Noeud<E> noeud : graphe.getNoeuds()) {
-            this.couts.put(noeud, Double.POSITIVE_INFINITY);
-            this.predecesseurs.put(noeud, null);
+        Map<Noeud<E>,Double> couts = new HashMap<>();
+        Map<Noeud<E>,Noeud<E>> predecesseurs = new HashMap<>();
+        for (Noeud<E> noeud : graphe.getNoeuds()){
+            couts.put(noeud, Double.POSITIVE_INFINITY);
+            predecesseurs.put(noeud,null);
         }
-        this.couts.put(depart, 0.0); // Coût du départ à zéro
+        couts.put(depart,0.0);
+        PriorityQueue<Noeud<E>> aExplorer = new PriorityQueue<>((n1, n2) -> (int) (couts.get(n1) - couts.get(n2)));
+        aExplorer.add(depart);
+        while (!aExplorer.isEmpty()) {
+            Noeud<E> noeudCourant = aExplorer.poll();
 
-        // Exploration des nœuds
-        this.filePriorite.offer(depart);
-        while (!filePriorite.isEmpty()) {
-            Noeud<E> noeudActuel = filePriorite.poll();
-            if (noeudActuel.equals(arrivee)) {
-                break; // Arrêt si le nœud d'arrivée est atteint
+            if (noeudCourant.equals(arrivee)) {
+                // Reconstruction du chemin
+                return reconstruireChemin(predecesseurs, arrivee);
             }
-            for (Noeud<E> voisin : graphe.getVoisins(noeudActuel)) {
-                double coutTotal = couts.get(noeudActuel) + graphe.getCoutArete(noeudActuel, voisin);
-                if (coutTotal < couts.get(voisin)) {
-                    this.couts.put(voisin, coutTotal);
-                    this.predecesseurs.put(voisin, noeudActuel);
-                    this.filePriorite.offer(voisin);
+
+            for (Noeud<E> voisin : graphe.getVoisins(noeudCourant)) {
+                double nouveauCout = couts.get(noeudCourant) + graphe.getCoutArete(noeudCourant, voisin);
+
+                if (nouveauCout < couts.get(voisin)) {
+                    couts.put(voisin, nouveauCout);
+                    predecesseurs.put(voisin, noeudCourant);
+                    aExplorer.add(voisin);
                 }
             }
         }
 
-        // Reconstruction du chemin le plus court
+        // Aucun chemin trouvé
+        return null;
+    }
+
+    private List<Noeud<E>> reconstruireChemin(Map<Noeud<E>, Noeud<E>> predecesseurs, Noeud<E> arrivee) {
         List<Noeud<E>> chemin = new ArrayList<>();
-        Noeud<E> noeudActuel = arrivee;
-        while (noeudActuel != null) {
-            chemin.add(noeudActuel);
-            noeudActuel = this.predecesseurs.get(noeudActuel);
+        Noeud<E> noeudCourant = arrivee;
+
+        while (predecesseurs.containsKey(noeudCourant)) {
+            chemin.add(0, noeudCourant);
+            noeudCourant = predecesseurs.get(noeudCourant);
         }
-        Collections.reverse(chemin);
+        chemin.add(0, noeudCourant);
 
         return chemin;
     }
