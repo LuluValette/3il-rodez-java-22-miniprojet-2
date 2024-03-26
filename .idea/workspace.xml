@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d66c37f-c813-41f0-8d57-0c3a404fc812" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/chemin/algorithmes/AlgorithmeAEtoile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELPERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELPERS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/application/CarteGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/application/CarteGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/chemin/algorithmes/AlgorithmeAEtoile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/chemin/algorithmes/AlgorithmeAEtoile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/chemin/algorithmes/AlgorithmeDijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/chemin/algorithmes/AlgorithmeDijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/elements/Noeud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ecole3il/rodez2023/carte/elements/Noeud.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mmp04/Documents/cours/java/projets/mini projet 2/3il-rodez-java-22-miniprojet-2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mmp04/Documents/Cours/java/Projet/projet plus court chemin/3il-rodez-java-22-miniprojet-2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -74,6 +78,12 @@
       <workItem from="1708952845708" duration="3307000" />
       <workItem from="1708957793534" duration="1877000" />
       <workItem from="1709386985310" duration="3992000" />
+      <workItem from="1710093626502" duration="713000" />
+      <workItem from="1710147373408" duration="37000" />
+      <workItem from="1711293296489" duration="934000" />
+      <workItem from="1711299573572" duration="813000" />
+      <workItem from="1711398292279" duration="1304000" />
+      <workItem from="1711489439921" duration="1655000" />
     </task>
     <servers />
   </component>
