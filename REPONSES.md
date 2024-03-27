@@ -12,3 +12,24 @@
 **Question : Pourquoi pensez-vous que la création d'une interface est une bonne pratique dans ce contexte ?**
 
 **Réponse :** Cela permet de respecter les règles SOLID.
+
+****
+****
+
+J'ai réalisé les classes suivantes :
+1. AdaptateurCarte
+2. Noeud
+3. Graphe
+4. AlgorithmeChemin
+5. AlgorithmeDijkstra
+6. AlgorithmeAEtoile
+
+J'ai repris les classes :
+1. CarteGUI
+2. ExempleCLI
+
+Il y a une erreur sur la classe ExempleCLI, je ne l'ai pas encore résolu.
+
+J'ai eu du mal pendant un moment sur l'utilisation des listes, je me fais bien aidé par Arthur et Tom.
+
+J'ai bien aimé le projet, pour la compréhension des algorithmes à faire.
