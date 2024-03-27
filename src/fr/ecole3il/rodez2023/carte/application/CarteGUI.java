@@ -5,7 +5,6 @@ import fr.ecole3il.rodez2023.carte.chemin.algorithmes.AlgorithmeAEtoile;
 import fr.ecole3il.rodez2023.carte.chemin.algorithmes.AlgorithmeChemin;
 import fr.ecole3il.rodez2023.carte.chemin.algorithmes.AlgorithmeDijkstra;
 import fr.ecole3il.rodez2023.carte.elements.*;
-import fr.ecole3il.rodez2023.carte.elements.Noeud;
 import fr.ecole3il.rodez2023.carte.manipulateurs.GenerateurCarte;
 
 import javax.swing.*;
