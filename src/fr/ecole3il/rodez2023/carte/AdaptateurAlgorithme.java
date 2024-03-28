@@ -26,16 +26,18 @@ public class AdaptateurAlgorithme {
      */
     public static Chemin trouverChemin(AlgorithmeChemin<Case> algorithme, Carte carte, int xDepart, int yDepart, int xArrivee, int yArrivee) {
         Graphe<Case> graphe = creerGraphe(carte);
+        Noeud<Case> noeudDepart = graphe.getNoeud(xDepart, yDepart);
+        Noeud<Case> noeudArrivee = graphe.getNoeud(xArrivee, yArrivee);
+        List<Noeud<Case>> cheminNoeuds = algorithme.trouverChemin(graphe, noeudDepart, noeudArrivee);
 
-        Tuile tuileDepart = carte.getTuile(xDepart, yDepart);
-        Case depart = new Case(tuileDepart, xDepart, yDepart);
+        afficherChemin(cheminNoeuds);
 
-        Tuile tuileArrivee = carte.getTuile(xArrivee, yArrivee);
-        Case arrivee = new Case(tuileArrivee, xArrivee, yArrivee);
+        List<Case> cheminCases = new ArrayList<>();
+        for (Noeud<Case> noeud : cheminNoeuds) {
+            cheminCases.add(noeud.getValeur());
+        }
 
-        List<Noeud<Case>> chemin = algorithme.trouverChemin(graphe, new Noeud<>(depart), new Noeud<>(arrivee));
-
-        return afficherChemin(chemin);
+        return new Chemin(cheminCases);
     }
 
     /**
@@ -59,18 +61,15 @@ public class AdaptateurAlgorithme {
         return graphe;
     }
 
-    public AdaptateurAlgorithme() {
-    }
-
     /**
      * Ajoute les arêtes entre une case et ses voisins dans le graphe.
      *
-     * @param graphe  le graphe dans lequel ajouter les arêtes
+     * @param graphe      le graphe dans lequel ajouter les arêtes
      * @param currentCase la case actuelle
-     * @param x       la coordonnée x de la case actuelle
-     * @param y       la coordonnée y de la case actuelle
-     * @param largeur la largeur de la carte
-     * @param hauteur la hauteur de la carte
+     * @param x           la coordonnée x de la case actuelle
+     * @param y           la coordonnée y de la case actuelle
+     * @param largeur     la largeur de la carte
+     * @param hauteur     la hauteur de la carte
      */
     static void ajouterAretesVoisines(Graphe<Case> graphe, Case currentCase, int x, int y, int largeur, int hauteur) {
         Noeud<Case> noeudCourant = null;
