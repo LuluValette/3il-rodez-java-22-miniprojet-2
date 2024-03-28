@@ -59,6 +59,9 @@ public class AdaptateurAlgorithme {
         return graphe;
     }
 
+    public AdaptateurAlgorithme() {
+    }
+
     /**
      * Ajoute les arêtes entre une case et ses voisins dans le graphe.
      *
@@ -70,15 +73,34 @@ public class AdaptateurAlgorithme {
      * @param hauteur la hauteur de la carte
      */
     static void ajouterAretesVoisines(Graphe<Case> graphe, Case currentCase, int x, int y, int largeur, int hauteur) {
-        for (int dx = -1; dx <= 1; dx++) {
-            for (int dy = -1; dy <= 1; dy++) {
-                if ((dx != 0 || dy != 0) && (x + dx >= 0 && x + dx < largeur && y + dy >= 0 && y + dy < hauteur)) {
-                    Case voisin = graphe.getNoeuds().get((x + dx) * hauteur + (y + dy)).getValeur();
-                    double cout = calculerCout(currentCase, voisin);
-                    graphe.ajouterArete(new Noeud<>(currentCase), new Noeud<>(voisin), cout);
-                }
+        Noeud<Case> noeudCourant = null;
+        for (Noeud<Case> noeud : graphe.getNoeuds()) {
+            Case c = noeud.getValeur();
+            if (c.equals(currentCase)) {
+                noeudCourant = noeud;
+                break;
             }
         }
+
+        int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        for (int[] direction : directions) {
+            int nouveauX = x + direction[0];
+            int nouveauY = y + direction[1];
+
+            if (nouveauX >= 0 && nouveauX < largeur && nouveauY >= 0 && nouveauY < hauteur) {
+
+                Noeud<Case> noeudVoisin = graphe.getNoeud(nouveauX, nouveauY);
+                Case casVoisin = noeudVoisin.getValeur();
+
+                double cout = calculerCout(currentCase, casVoisin);
+
+                graphe.ajouterArete(noeudCourant, noeudVoisin, cout);
+
+                assert noeudCourant != null;
+                noeudCourant.ajouterVoisin(noeudVoisin);
+            }
+        }
+
     }
 
     /**
