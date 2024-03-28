@@ -32,6 +32,6 @@ Il y a une erreur sur la classe ExempleCLI, je ne l'ai pas encore résolu.
 
 J'ai eu du mal pendant un moment sur l'utilisation des listes, je me suis fais bien aidé par Arthur et Tom.
 
-J'ai encore une erreur sur le code, que j'ai du mal à résorber. Elle se trouve au niveau du calcul de l'itinéraire le plus court dans la classe AdaptateurAlgorithme : le programme reçoit un null de la part d'une fonction de la classe Graphe (fonction getNoeud). Je ne vois pas, pour l'instant, comment changer la chose.
+Je dois encore modifier le code car, lorsque je prends un second point plus en bas à gauche que le premier, le chemin n'est que sur un seul point.
 
 J'ai bien aimé le projet, pour la compréhension des algorithmes à faire.
