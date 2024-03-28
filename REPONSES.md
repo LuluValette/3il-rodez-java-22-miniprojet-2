@@ -30,6 +30,8 @@ J'ai repris les classes :
 
 Il y a une erreur sur la classe ExempleCLI, je ne l'ai pas encore résolu.
 
-J'ai eu du mal pendant un moment sur l'utilisation des listes, je me fais bien aidé par Arthur et Tom.
+J'ai eu du mal pendant un moment sur l'utilisation des listes, je me suis fais bien aidé par Arthur et Tom.
+
+J'ai encore une erreur sur le code, que j'ai du mal à résorber.
 
 J'ai bien aimé le projet, pour la compréhension des algorithmes à faire.
