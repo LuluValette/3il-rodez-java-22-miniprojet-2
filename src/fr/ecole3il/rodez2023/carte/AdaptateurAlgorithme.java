@@ -72,13 +72,10 @@ public class AdaptateurAlgorithme {
      * @param hauteur     la hauteur de la carte
      */
     static void ajouterAretesVoisines(Graphe<Case> graphe, Case currentCase, int x, int y, int largeur, int hauteur) {
-        Noeud<Case> noeudCourant = null;
-        for (Noeud<Case> noeud : graphe.getNoeuds()) {
-            Case c = noeud.getValeur();
-            if (c.equals(currentCase)) {
-                noeudCourant = noeud;
-                break;
-            }
+        Noeud<Case> noeudCourant = graphe.getNoeud(x, y);
+
+        if (noeudCourant == null) {
+            return; // Si le noeud courant est null, il n'y a rien à faire
         }
 
         int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
@@ -89,6 +86,10 @@ public class AdaptateurAlgorithme {
             if (nouveauX >= 0 && nouveauX < largeur && nouveauY >= 0 && nouveauY < hauteur) {
 
                 Noeud<Case> noeudVoisin = graphe.getNoeud(nouveauX, nouveauY);
+                if (noeudVoisin == null) {
+                    continue; // Passer à l'itération suivante si le noeud voisin est null
+                }
+
                 Case casVoisin = noeudVoisin.getValeur();
 
                 double cout = calculerCout(currentCase, casVoisin);
@@ -99,8 +100,8 @@ public class AdaptateurAlgorithme {
                 noeudCourant.ajouterVoisin(noeudVoisin);
             }
         }
-
     }
+
 
     /**
      * Calcule le coût entre deux cases (arêtes non diagonales).
@@ -123,11 +124,11 @@ public class AdaptateurAlgorithme {
      */
     static Chemin afficherChemin(List<Noeud<Case>> chemin) {
         if (chemin.isEmpty()) {
-            System.out.println("No path found!");
+            System.out.println("Pas de chemin trouvé !");
             return new Chemin(new ArrayList<>());
         }
 
-        System.out.print("Path: ");
+        System.out.print("Chemin trouvé : ");
         List<Case> cheminCases = new ArrayList<>();
         for (Noeud<Case> noeud : chemin) {
             Case caseNode = noeud.getValeur();
