@@ -30,14 +30,7 @@ public class AdaptateurAlgorithme {
         Noeud<Case> noeudArrivee = graphe.getNoeud(xArrivee, yArrivee);
         List<Noeud<Case>> cheminNoeuds = algorithme.trouverChemin(graphe, noeudDepart, noeudArrivee);
 
-        afficherChemin(cheminNoeuds);
-
-        List<Case> cheminCases = new ArrayList<>();
-        for (Noeud<Case> noeud : cheminNoeuds) {
-            cheminCases.add(noeud.getValeur());
-        }
-
-        return new Chemin(cheminCases);
+        return afficherChemin(cheminNoeuds);
     }
 
     /**
@@ -46,7 +39,7 @@ public class AdaptateurAlgorithme {
      * @param carte la carte à partir de laquelle créer le graphe
      * @return le graphe créé
      */
-    static Graphe<Case> creerGraphe(Carte carte) {
+    public static Graphe<Case> creerGraphe(Carte carte) {
         Graphe<Case> graphe = new Graphe<>();
         int largeur = carte.getLargeur();
         int hauteur = carte.getHauteur();
@@ -122,7 +115,7 @@ public class AdaptateurAlgorithme {
      * @param chemin la liste des nœuds constituant le chemin
      * @return un objet Chemin représentant le chemin trouvé
      */
-    static Chemin afficherChemin(List<Noeud<Case>> chemin) {
+    public static Chemin afficherChemin(List<Noeud<Case>> chemin) {
         if (chemin.isEmpty()) {
             System.out.println("Pas de chemin trouvé !");
             return new Chemin(new ArrayList<>());
@@ -130,8 +123,8 @@ public class AdaptateurAlgorithme {
 
         System.out.print("Chemin trouvé : ");
         List<Case> cheminCases = new ArrayList<>();
-        for (Noeud<Case> noeud : chemin) {
-            Case caseNode = noeud.getValeur();
+        for (int i = chemin.size() - 1; i >= 0; i--) {
+            Case caseNode = chemin.get(i).getValeur();
             cheminCases.add(caseNode);
             System.out.print(" -> " + caseNode.toString());
         }
@@ -139,4 +132,5 @@ public class AdaptateurAlgorithme {
 
         return new Chemin(cheminCases);
     }
+
 }
